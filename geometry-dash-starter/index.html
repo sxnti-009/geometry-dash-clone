@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Geometry Dash - Aprendiendo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Mi primer juego tipo Geometry Dash</h1>
-    <p>Presiona <strong>ESPACIO</strong> o haz <strong>clic</strong> para saltar</p>
+    <div class="game-wrapper">
+        <header class="game-header">
+            <h1>GEOMETRY DASH</h1>
+            <p class="subtitle">Presiona <kbd>ESPACIO</kbd> o <strong>clic</strong> para saltar</p>
+        </header>
 
-    <!-- El canvas es la "pantalla" donde dibujamos el juego -->
-    <canvas id="gameCanvas" width="800" height="400"></canvas>
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
 
-    <p id="score">Puntos: 0</p>
-    <p id="message"></p>
+        <div class="hud">
+            <p id="score">Puntos: 0</p>
+            <p id="message"></p>
+        </div>
+    </div>
 
-    <!-- Cargamos el JavaScript al final para que la página exista primero -->
     <script src="game.js"></script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-/* Estilo general de la página */
 * {
     margin: 0;
     padding: 0;
@@ -6,40 +5,88 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1a1a2e;
+    font-family: "Orbitron", Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse at top, #1a1040 0%, #0a0a18 50%, #050510 100%);
     color: #ffffff;
-    text-align: center;
     padding: 20px;
 }
 
+.game-wrapper {
+    text-align: center;
+    max-width: 860px;
+    width: 100%;
+}
+
+.game-header {
+    margin-bottom: 20px;
+}
+
 h1 {
-    margin-bottom: 10px;
-    color: #00ff88;
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    background: linear-gradient(180deg, #ffffff 0%, #00ffcc 50%, #00aa88 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 40px rgba(0, 255, 200, 0.3);
+    filter: drop-shadow(0 0 12px rgba(0, 255, 200, 0.4));
 }
 
-p {
-    margin-bottom: 15px;
-    color: #cccccc;
+.subtitle {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #8899aa;
+    letter-spacing: 0.05em;
 }
 
-/* La pantalla del juego */
+kbd {
+    display: inline-block;
+    padding: 3px 10px;
+    background: linear-gradient(180deg, #2a2a4a 0%, #1a1a30 100%);
+    border: 1px solid #00ffcc;
+    border-radius: 4px;
+    color: #00ffcc;
+    font-family: inherit;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 0 #005544, 0 0 10px rgba(0, 255, 200, 0.2);
+}
+
 #gameCanvas {
     display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
     margin: 0 auto;
-    background-color: #16213e;
-    border: 3px solid #00ff88;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow:
+        0 0 0 2px rgba(0, 255, 200, 0.3),
+        0 0 30px rgba(0, 255, 200, 0.15),
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        inset 0 0 80px rgba(0, 0, 0, 0.3);
+}
+
+.hud {
+    margin-top: 18px;
 }
 
 #score {
-    font-size: 24px;
-    margin-top: 15px;
-    color: #00ff88;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #00ffcc;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 20px rgba(0, 255, 200, 0.5);
 }
 
 #message {
-    font-size: 20px;
-    color: #ff6b6b;
-    min-height: 30px;
+    font-size: 0.95rem;
+    color: #ff6688;
+    min-height: 28px;
+    margin-top: 8px;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 15px rgba(255, 80, 120, 0.4);
 }
